@@ -27,16 +27,16 @@ Begin your house-sorting search by selecting one of 4 options:
 
 ## Option One – Search by Student
 
-- Upon selecting this option, you'll be given a list of all students. Select one and you'll be brought to a menu for that student with the following options:
+Upon selecting this option, you'll be given a list of all students. Select one and you'll be brought to a menu for that student with the following options:
 
       - Filter by houses available to that student, showing values that belong to both the student and the house.
       - List all values (ordered alphabetically) that student possesses.
       - List all values (ordered based on their overall impact score) that student possesses.
       - Return to main menu.
 
-- Upon selecting a value, you'll be given a short description along with a decision to see more info or return to the main menu.
+Upon selecting a value, you'll be given a short description along with a decision to see more info or return to the main menu.
 
-- The value info page contains info including the value’s:
+The value info page contains info including the value’s:
 
       - Name
       - Student
