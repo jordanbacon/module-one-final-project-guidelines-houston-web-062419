@@ -1,59 +1,72 @@
-# Module One Final Project Guidelines
+## Hogwarts Day One Guide
 
-Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
+The Hogwarts Day One Guide is here to help prospective students through their first day as a student. 
 
-For your final project, we'll be building a Command Line database application.
 
-## Project Requirements
+## Usage Guide 
 
-### Option One - Data Analytics Project
+Initial Setup
+1. Fork and clone this repository to your local machine.
+2. CD into the newly cloned directory
+3. Type bundle install in the terminal to get all the required gems
+4. In terminal, type in 'ruby bin/run.rb' to begin the app.
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have at minimum three models including one join model. This means you must have a many-to-many relationship.
-3. You should seed your database using data that you collect either from a CSV, a website by scraping, or an API.
-4. Your models should have methods that answer interesting questions about the data. For example, if you've collected info about movie reviews, what is the most popular movie? What movie has the most reviews?
-5. You should provide a CLI to display the return values of your interesting methods.  
-6. Use good OO design patterns. You should have separate classes for your models and CLI interface.
+## Navigating the Database
 
-  **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
+Welcome to Hogwarts School of Witchcraft and Wizardry! This database was made with the intention of showing new students the relationships between students, houses, and values. Students may peruse this database while waiting to be sorted into houses to get a grasp of the history of each houses and some of their notable members. 
 
-### Option Two - Command Line CRUD App
+      - Each value belongs to a student and to a house.
+      - A student has many values.
+      - A house has many values.
+      - Through values, a student has many house-options and a house has many students-options.
+Begin your house-sorting search by selecting one of 4 options: 
+      - Search by student
+      - Search by house
+      - Search by value
+      - Exit the database
 
-1. Access a Sqlite3 Database using ActiveRecord.
-2. You should have a minimum of three models.
-3. You should build out a CLI to give your user full CRUD ability for at least one of your resources. For example, build out a command line To-Do list. A user should be able to create a new to-do, see all todos, update a todo item, and delete a todo. Todos can be grouped into categories, so that a to-do has many categories and categories have many to-dos.
-4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
+## Option One – Search by Student
 
-### Brainstorming and Proposing a Project Idea
+- Upon selecting this option, you'll be given a list of all students. Select one and you'll be brought to a menu for that student with the following options:
 
-Projects need to be approved prior to launching into them, so take some time to brainstorm project options that will fulfill the requirements above.  You must have a minimum of four [user stories](https://en.wikipedia.org/wiki/User_story) to help explain how a user will interact with your app.  A user story should follow the general structure of `"As a <role>, I want <goal/desire> so that <benefit>"`. In example, if we were creating an app to randomly choose nearby restaurants on Yelp, we might write:
+      - Filter by houses available to that student, showing values that belong to both the student and the house.
+      - List all values (ordered alphabetically) that student possesses.
+      - List all values (ordered based on their overall impact score) that student possesses.
+      - Return to main menu.
 
-* As a user, I want to be able to enter my name to retrieve my records
-* As a user, I want to enter a location and be given a random nearby restaurant suggestion
-* As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
-* As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
+- Upon selecting a value, you'll be given a short description along with a decision to see more info or return to the main menu.
 
-## Instructions
+  The value info page contains info including the value’s:
+      - Name
+      - Student
+      - House
+      - A brief reason for the value’s importance
+      - Value’s overall success score in classes (does having this value help in class?)
+      - Success Score – Astronomy
+      - Success Score – Charms
+      - Success Score– Defense Against the Dark Arts 
+      - Success Score – Flying
+      - Success Score – Herbology
+      - Success Score – History of Magic
+      - Success Score – Potions
+      - Success Score – Transfiguration
 
-1. Fork and clone this repository.
-2. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
-3. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
-4. Make sure your project checks off each of the above requirements.
-5. Prepare a video demo (narration helps!) describing how a user would interact with your working project.
-    * The video should:
-      - Have an overview of your project.(2 minutes max)
-6. Prepare a presentation to follow your video.(3 minutes max)
-    * Your presentation should:
-      - Describe something you struggled to build, and show us how you ultimately implemented it in your code.
-      - Discuss 3 things you learned in the process of working on this project.
-      - Address, if anything, what you would change or add to what you have today?
-      - Present any code you would like to highlight.   
-7. *OPTIONAL, BUT RECOMMENDED*: Write a blog post about the project and process.
+You may return to the main menu from this page.
 
----
-### Common Questions:
-- How do I turn off my SQL logger?
-```ruby
-# in config/environment.rb add this line:
-ActiveRecord::Base.logger = nil
-```
+## Option Two - Filter by House
+
+Upon selecting this option you'll be given a list of all houses. Select one and you'll be brought to a menu for that house with the following options:
+
+    - Filter by students that have values within that house, showing values that belong to both the house and the student.
+    - List all values (ordered alphabetically) that house possesses.
+    - List all values (ordered by overall success score) that house possesses. 
+    - Return to main menu.
+    - Upon selecting a value, you'll be given a short description along with a decision to see more info (see student info page above) or return to the main menu.
+
+## Option Three - Search by Value
+
+Upon selecting this option you'll be asked to type the full name value you're searching for. 
+
+Once a successful search has occured, you'll be given a short description of the value along with a decision to see more info (see company info page above) or return to the main menu.
+
+That's it! You're now lining up to get sorted into your houses by the sorting hat. Have a great school year! 
