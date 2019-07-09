@@ -1,33 +1,41 @@
 require 'tty-prompt'
 
+$prompt = TTY::Prompt.new(symbols: {marker: '>'})
 
-$prompt = TTY::Prompt.new
 
 def start
     puts 'Welcome to Hogwarts'
     
 end
 
-def name
-    name = $prompt.ask('Welcome to Hogwarts, what is your name? ')
-    witchorwizard = %w('Witch' or 'Wizard')
-    $prompt.multi_select("Are you a witch or wizard? ", witchorwizard)
+# def name
+#     name = $prompt.ask('Welcome to Hogwarts, what is your name? ')
+#     witchorwizard = %w(Witch Wizard)
+#     $prompt.multi_select("Are you a witch or wizard? ", witchorwizard)
 
-    puts "Yer a #{witchorwizard}, #{name}"
+#     puts "Yer a #{witchorwizard}, #{name}"
     
+# end
+
+def information
+    hash = $prompt.collect do
+        key(:name).ask('Name:')
+        key(:trait).ask('Trait:')
+        key(:favorite_house).ask('Favorite House:')
+    end
 end
 
-def favorite_house
-    # favorite_house = $prompt.ask('Is there a specific House you want to be in? ')
-    choices = %w(Gryffindor Slytherin Hufflepuff Ravenclaw)
-    $prompt.multi_select("Is there a specific House you want to be in?", choices)
-end
+# def favorite_house
+#     # favorite_house = $prompt.ask('Is there a specific House you want to be in? ')
+#     choices = %w(Gryffindor Slytherin Hufflepuff Ravenclaw)
+#     $prompt.multi_select("Is there a specific House you want to be in?", choices)
+# end
 
-def traits
-    traits = $prompt.ask('Which of the following traits best describes you?')
-    choices2 = %w(Brave Intelligent Ambitious Loyal)
-    $prompt.multi_select('Select your trait', choices2)
-end
+# def traits
+#     traits = $prompt.ask('Which of the following traits best describes you?')
+#     choices2 = %w(Brave Intelligent Ambitious Loyal)
+#     $prompt.multi_select('Select your trait', choices2)
+# end
 
 # def first_prompt
 #     prompt = TTY::Prompt.new

@@ -43,14 +43,6 @@ The value info page contains info including the value’s:
       - House
       - A brief reason for the value’s importance
       - Value’s overall success score in classes (does having this value help in class?)
-      - Success Score – Astronomy
-      - Success Score – Charms
-      - Success Score– Defense Against the Dark Arts 
-      - Success Score – Flying
-      - Success Score – Herbology
-      - Success Score – History of Magic
-      - Success Score – Potions
-      - Success Score – Transfiguration
 
 You may return to the main menu from this page.
 
