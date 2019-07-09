@@ -36,7 +36,7 @@ Begin your house-sorting search by selecting one of 4 options:
 
 - Upon selecting a value, you'll be given a short description along with a decision to see more info or return to the main menu.
 
-  The value info page contains info including the value’s:
+- The value info page contains info including the value’s:
       - Name
       - Student
       - House
