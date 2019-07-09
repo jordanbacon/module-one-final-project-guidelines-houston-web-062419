@@ -38,10 +38,10 @@ Begin your house-sorting search by selecting one of 4 options:
 
 - The value info page contains info including the value’s:
 
-            - Name
-            - Student
-            - House
-            - A brief reason for the value’s importance
+      - Name
+      - Student
+      - House
+      - A brief reason for the value’s importance
       - Value’s overall success score in classes (does having this value help in class?)
       - Success Score – Astronomy
       - Success Score – Charms
