@@ -1,4 +1,4 @@
-class Values < ActiveRecord::Base
-    belongs_to :houses
-    belongs_to :students
+class Value < ActiveRecord::Base
+    belongs_to :house
+    belongs_to :student
 end
