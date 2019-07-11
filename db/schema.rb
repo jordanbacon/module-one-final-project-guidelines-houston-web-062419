@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20190711073515) do
 
   create_table "houses", force: :cascade do |t|
     t.string "house_name"
+    t.string "ideal"
     t.string "founder"
   end
 
@@ -23,10 +24,8 @@ ActiveRecord::Schema.define(version: 20190711073515) do
   end
 
   create_table "values", force: :cascade do |t|
-    t.string  "ideal"
     t.integer "student_id"
     t.integer "house_id"
-    t.string  "description"
   end
 
 end
