@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 20190711073515) do
 
   create_table "houses", force: :cascade do |t|
-    t.string "name"
-    t.string "info"
+    t.string "house_name"
+    t.string "founder"
   end
 
   create_table "students", force: :cascade do |t|
@@ -23,11 +23,10 @@ ActiveRecord::Schema.define(version: 4) do
   end
 
   create_table "values", force: :cascade do |t|
-    t.string  "name"
+    t.string  "ideal"
     t.integer "student_id"
     t.integer "house_id"
     t.string  "description"
   end
 
-  
-  end
+end

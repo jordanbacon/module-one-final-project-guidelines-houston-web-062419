@@ -1,29 +1,73 @@
 require 'tty-prompt'
 
-$prompt = TTY::Prompt.new(symbols: {marker: '>'})
+# $prompt = TTY::Prompt.new
 
-
-def start
-    puts 'Welcome to Hogwarts'
+# # def start
+# #     puts 'Welcome to Hogwarts'
     
-end
+# # end
 
-# def name
-#     name = $prompt.ask('Welcome to Hogwarts, what is your name? ')
-#     witchorwizard = %w(Witch Wizard)
-#     $prompt.multi_select("Are you a witch or wizard? ", witchorwizard)
+# # def name
+# #     name = $prompt.ask('Welcome to Hogwarts, what is your name? ')
+# #     witchorwizard = %w(Witch Wizard)
+# #     answer = $prompt.select("Are you a witch or wizard? ", witchorwizard)
 
-#     puts "Yer a #{witchorwizard}, #{name}"
+# #     puts "Yer a #{answer}, #{name}"
     
+# # end
+
+# # def information
+# #     hash = $prompt.collect do
+# #         key(:name).ask('Name:')
+# #         key(:trait).ask('Trait:')
+# #         key(:favorite_house).ask('Favorite House:')
+# #     end
+# # end
+
+# $prompt = TTY::Prompt.new
+
+# def welcome
+
+#     puts "Welcome to Hogwarts!"
+#     puts "Please enter your information so we can add you to the Sorting Database."
+#     name = @prompt.ask('What is your name?', default: ENV['USER'])
+#     puts name
+#     email = @prompt.ask('What is your email address? (By entering email address, you agree to receive school communications via email...as well as owl post.)')
+#     puts email
+#     puts "Thank you! You have been added."
+
+#     Student.create(name: name, email_address: email)
 # end
 
-def information
-    hash = $prompt.collect do
-        key(:name).ask('Name:')
-        key(:trait).ask('Trait:')
-        key(:favorite_house).ask('Favorite House:')
-    end
-end
+# def choice
+#     choice = @prompt.select("\nPlease choose from the following options:") do |menu|
+#         menu.choice 'Students', 1
+#         menu.choice 'Houses', 2
+#         menu.choice 'Values', 3
+#         menu.choice 'Exit', 4
+#     end
+
+#     if choice == 1
+#         student_menu()
+#     elsif choice == 2
+#         house_menu()
+#     elsif choice == 3
+#         value_menu()
+#     else choice == 4
+#         return
+#     end
+# end
+
+# def student_menu(current_user)
+#     student_selection = $prompt.select("Please choose a student to see their contact info") do |menu|
+#         menu.enum "."
+#         users_students(current_user).each_with_index do |student, index|
+#             menu.choice student.name, index
+#         end
+#     end
+#     selected_student = users_students(current_student)[student_selection]
+#     student_information(current_user, selected_student)
+# end
 
 # def favorite_house
 #     # favorite_house = $prompt.ask('Is there a specific House you want to be in? ')
