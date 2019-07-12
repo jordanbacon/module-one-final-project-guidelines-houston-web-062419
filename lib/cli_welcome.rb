@@ -1,4 +1,9 @@
+require 'colorize'
+
 @prompt = TTY::Prompt.new
+
+puts Houseimage::WELCOME.colorize(:red)
+
 
 def welcome
 
